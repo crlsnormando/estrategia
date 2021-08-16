@@ -288,12 +288,21 @@ SELECT total_infectados from INFECCAO where pais_id = 1 and doenca_id = 5
 
 ## Removendo dados
 
+DROP: Remove completamente uma tabela. A sintaxe é:
+```sql
+DROP TABLE nome_da_tabela;
+```
 Uruguai acaba de reportar que não possui mais casos de SARAMPO!
 
+DELETE: Remove todas as linhas ou linhas específicas, mas mantém a tabela no banco de dados (mesmo que vazia, caso todas as linhas sejam deletadas). A sintaxe para remover linhas específicas é:
 ```sql
   delete from INFECCAO where pais_id = 3 and doenca_id = 1;
 ```
+TRUNCATE: Remove todas as linhas, mas mantém a tabela no banco de dados. Não é possível apagar apenas linhas específicas. Além disso, tem uma performance melhor que o comando DELETE. A sintaxe é:
 
+```sql
+TRUNCATE TABLE nome_da_tabela;
+```
 > O que seria melhor fazer nesse caso? Atualizar ou deletar! Não sabemos, é basicamente uma decisão negocial!
 
 
